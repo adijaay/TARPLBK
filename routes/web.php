@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\narapidanaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::apiResource('narapidana', narapidanaController::class);
+
+Route::get("narapidana/search/{name}", [narapidanaController::class, 'searchName']);
+// Route::get("narapidana/search", [narapidanaController::class, 'searchAddress']);
