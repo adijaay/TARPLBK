@@ -12,7 +12,7 @@ class narapidanaController extends Controller
     public function index(Request $request)
     {
         if($request->no_sel){
-            return narapidana::where("no_sel", 'LIKE', '%'.$request->no_sel.'%')->get();
+            return narapidana::where("no_sel",  $request->no_sel)->get();
         }
         else Return narapidana::all();
         
