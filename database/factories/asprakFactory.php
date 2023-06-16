@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
-class narapidanaFactory extends Factory
+class asprakFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,11 +18,11 @@ class narapidanaFactory extends Factory
     public function definition(): array
     {
         return [
-            'id_narapidana' => fake()->numberBetween(1,10000),
-            'no_sel'=>fake()->numberBetween(0, 10000),
-            'name' => fake()->name(),
-            'address' => fake()->address(),
-            'phone' => $this->faker->e164PhoneNumber(),
+            'id_asprak' => fake()->numberBetween(1,10000),
+            'nama' => fake()->name(),
+            'email' => fake()->email(),
+            'norek' => $this->faker->numberBetween(111111111111,123456789109),
+            'modul' => $this->faker->numberBetween(1,5)
         ];
     }
 

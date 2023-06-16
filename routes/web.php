@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\narapidanaController;
+use App\Http\Controllers\asprakController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::apiResource('narapidana', narapidanaController::class);
+Route::apiResource('asprak', asprakController::class);
 
-Route::get("narapidana/search/{name}", [narapidanaController::class, 'searchName']);
+Route::get("asprak/search/{name}", [asprakController::class, 'searchName']);
 // Route::get("narapidana/search", [narapidanaController::class, 'searchAddress']);
